@@ -1,5 +1,10 @@
 package com.hib.HibernateSec;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="students")
 public class Student {
 	private int id;
 	private String name;
