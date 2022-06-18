@@ -1,11 +1,13 @@
 package com.hib.HibernateSec;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="students")
 public class Student {
+	@Id
 	private int id;
 	private String name;
 	private String city;
