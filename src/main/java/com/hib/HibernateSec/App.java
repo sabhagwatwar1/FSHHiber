@@ -6,7 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 /**
- * Hello world!
+ * 
  *
  */
 public class App 
@@ -18,9 +18,9 @@ public class App
         cfg.configure();
         SessionFactory factory=cfg.buildSessionFactory();
         Session s=factory.openSession();
+        Transaction t=s.beginTransaction();
         
         Student st=new Student(101,"Ram","Mumbai");
-        Transaction t=s.beginTransaction();
         
         s.save(st);
         t.commit();
